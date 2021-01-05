@@ -1,0 +1,86 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  
+- story: cyber security happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: cyber_security
+  - action: utter_cyber_security
+  - action: utter_ask_user_form
+  - action: user_form
+  - active_loop: user_form
+  - active_loop: null
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: vciso happay path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: vciso
+  - action: utter_vciso
+  - action: utter_ask_user_form
+  - action: user_form
+  - active_loop: user_form
+  - active_loop: null
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: data protection and privacy happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: data_protection_and_privacy
+  - action: utter_data_protection_privacy
+  - action: utter_ask_user_form
+  - action: user_form
+  - active_loop: user_form
+  - active_loop: null
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: it audit services happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: it_audit_services
+  - action: utter_it_audit_readiness
+  - action: utter_ask_user_form
+  - action: user_form
+  - active_loop: user_form
+  - active_loop: null
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: identity access and management services happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: identity_access_management
+  - action: utter_identity_access_management
+  - action: utter_ask_user_form
+  - action: user_form
+  - active_loop: user_form
+  - active_loop: null
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: security operations happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: sec_ops
+  - action: utter_sec_ops
+  - action: utter_ask_user_form
+  - action: user_form
+  - active_loop: user_form
+  - active_loop: null
+  - intent: goodbye
+  - action: utter_goodbye
