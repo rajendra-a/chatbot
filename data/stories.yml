@@ -1,12 +1,10 @@
 version: "2.0"
-
 stories:
-
 - story: happy path
   steps:
   - intent: greet
   - action: utter_greet
-  
+
 - story: cyber security happy path
   steps:
   - intent: greet
@@ -17,6 +15,9 @@ stories:
   - action: user_form
   - active_loop: user_form
   - active_loop: null
+  - action: utter_confirm
+  - intent: affirm
+  - action: action_send_email
   - intent: goodbye
   - action: utter_goodbye
 
@@ -30,6 +31,9 @@ stories:
   - action: user_form
   - active_loop: user_form
   - active_loop: null
+  - action: utter_confirm
+  - intent: affirm
+  - action: action_send_email
   - intent: goodbye
   - action: utter_goodbye
 
@@ -43,6 +47,9 @@ stories:
   - action: user_form
   - active_loop: user_form
   - active_loop: null
+  - action: utter_confirm
+  - intent: affirm
+  - action: action_send_email
   - intent: goodbye
   - action: utter_goodbye
 
@@ -56,6 +63,9 @@ stories:
   - action: user_form
   - active_loop: user_form
   - active_loop: null
+  - action: utter_confirm
+  - intent: affirm
+  - action: action_send_email
   - intent: goodbye
   - action: utter_goodbye
 
@@ -69,9 +79,12 @@ stories:
   - action: user_form
   - active_loop: user_form
   - active_loop: null
+  - action: utter_confirm
+  - intent: affirm
+  - action: action_send_email
   - intent: goodbye
   - action: utter_goodbye
-
+  
 - story: security operations happy path
   steps:
   - intent: greet
@@ -82,5 +95,8 @@ stories:
   - action: user_form
   - active_loop: user_form
   - active_loop: null
+  - action: utter_confirm
+  - intent: affirm
+  - action: action_send_email
   - intent: goodbye
   - action: utter_goodbye

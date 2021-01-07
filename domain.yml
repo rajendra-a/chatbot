@@ -99,12 +99,24 @@ responses:
       Analysis (UEBA), Response and Remediation, End-Point Detection and Response
       (EDR), Threat Intelligence and Threat Analytics & predictive engine.
   utter_ask_user_form:
-  - text: Please write username, email and phone-number. Soon we will get in touch
-      with you.
+  - text: Please provide us username, email and phone number. Soon we will get in
+      touch with you.
+  utter_confirm:
+  - buttons:
+    - payload: /affirm
+      title: Yes
+    - payload: /deny
+      title: No
+    text: Please confirm your username is {username}, email {email-address}, and phone
+      number {phone-number}
+  utter_deny:
+  - text: Seems to be not interested, Thanks for your valuble time
   utter_goodbye:
   - text: Thank you, Bye
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
+actions:
+- action_send_email
 forms:
   user_form:
     email-address:
