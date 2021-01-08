@@ -94,3 +94,16 @@ stories:
   - action: action_send_email
   - intent: goodbye
   - action: utter_goodbye
+- story: vciso happy path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: vciso
+  - action: utter_vciso
+  - intent: utter_ask_user_form
+  - action: user_form
+  - active_loop: user_form
+  - active_loop: null
+  - action: utter_confirm
+  - intent: deny
+  - action: utter_goodbye

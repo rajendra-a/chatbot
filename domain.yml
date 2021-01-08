@@ -15,6 +15,7 @@ intents:
 - identity_access_management
 - sec_ops
 - inform
+- utter_ask_user_form
 entities:
 - username
 - email-address
@@ -29,9 +30,7 @@ slots:
   phone-number:
     type: text
     influence_conversation: false
-  requested_slot:
-    type: unfeaturized
-    influence_conversation: false
+  
 responses:
   utter_greet:
   - buttons:
@@ -103,7 +102,7 @@ responses:
       (EDR), Threat Intelligence and Threat Analytics & predictive engine.
   utter_ask_user_form:
   - text: Please provide us username, email and phone number. Soon we will get in
-      touch with you.
+      touch with you
   utter_confirm:
   - buttons:
     - payload: /affirm
@@ -122,12 +121,13 @@ actions:
 - action_send_email
 forms:
   user_form:
+    username:
+    - entity: username
+      type: from_entity
     email-address:
     - entity: email-address
       type: from_entity
     phone-number:
     - entity: phone-number
       type: from_entity
-    username:
-    - entity: username
-      type: from_entity
+    
