@@ -16,13 +16,11 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
-- rule: Submit form
-  condition:
-  - active_loop: user_form
+- rule: say bye anitime
   steps:
-  - action: user_form
-  - active_loop: null
-  - action: utter_confirm
+  - intent: deny
+  - action: utter_deny
+
 
 
 

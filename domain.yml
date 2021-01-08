@@ -1,6 +1,7 @@
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
 intents:
 - greet
 - goodbye
@@ -16,10 +17,14 @@ intents:
 - sec_ops
 - inform
 - utter_ask_user_form
+- username
+- explain
+
 entities:
 - username
 - email-address
 - phone-number
+
 slots:
   username:
     type: text
@@ -30,7 +35,10 @@ slots:
   phone-number:
     type: text
     influence_conversation: false
-  
+  requested_slot:
+    type: unfeaturized
+    influence_conversation: false
+
 responses:
   utter_greet:
   - buttons:
@@ -117,17 +125,30 @@ responses:
   - text: Thank you, Bye
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
+  utter_explain_username:
+  - text: we need username to call you with a name
+  utter_ask_username:
+  - text: Please provide name
+  utter_explain_email:
+  - text: we want to send a mail about us to know precisely
+  utter_ask_email:
+  - text: Please provide email.
+  utter_explain_phone:
+  - text: we can connect in a mean time.
+  utter_ask_phone:
+  - text: please provide phone number
+  
 actions:
 - action_send_email
+
 forms:
   user_form:
-    username:
-    - entity: username
-      type: from_entity
     email-address:
     - entity: email-address
       type: from_entity
     phone-number:
     - entity: phone-number
       type: from_entity
-    
+    username:
+    - entity: username
+      type: from_entity

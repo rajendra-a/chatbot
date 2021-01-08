@@ -1,9 +1,5 @@
 version: "2.0"
 stories:
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
 - story: cyber security happy path
   steps:
   - intent: greet
@@ -17,7 +13,6 @@ stories:
   - action: utter_confirm
   - intent: affirm
   - action: action_send_email
-  - intent: goodbye
   - action: utter_goodbye
 - story: vciso happay path
   steps:
@@ -32,7 +27,6 @@ stories:
   - action: utter_confirm
   - intent: affirm
   - action: action_send_email
-  - intent: goodbye
   - action: utter_goodbye
 - story: data protection and privacy happy path
   steps:
@@ -47,7 +41,6 @@ stories:
   - action: utter_confirm
   - intent: affirm
   - action: action_send_email
-  - intent: goodbye
   - action: utter_goodbye
 - story: it audit services happy path
   steps:
@@ -62,7 +55,6 @@ stories:
   - action: utter_confirm
   - intent: affirm
   - action: action_send_email
-  - intent: goodbye
   - action: utter_goodbye
 - story: identity access and management services happy path
   steps:
@@ -77,7 +69,6 @@ stories:
   - action: utter_confirm
   - intent: affirm
   - action: action_send_email
-  - intent: goodbye
   - action: utter_goodbye
 - story: security operations happy path
   steps:
@@ -92,18 +83,126 @@ stories:
   - action: utter_confirm
   - intent: affirm
   - action: action_send_email
-  - intent: goodbye
   - action: utter_goodbye
-- story: vciso happy path 2
+- story: username interjection
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: vciso
-  - action: utter_vciso
-  - intent: utter_ask_user_form
+  - intent: identity_access_management
+  - action: utter_identity_access_management
+  - action: utter_ask_user_form
   - action: user_form
   - active_loop: user_form
+  - slot_was_set:
+    - requested_slot: username
+  - intent: explain
+  - action: utter_explain_username
+  - action: utter_ask_username
+  - action: utter_confirm
+  - intent: affirm
+  - action: action_send_email
+  - action: utter_goodbye
+- story: email interjection
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: identity_access_management
+  - action: utter_identity_access_management
+  - action: utter_ask_user_form
+  - action: user_form
+  - active_loop: user_form
+  - slot_was_set:
+    - requested_slot: email-address
+  - intent: explain
+  - action: utter_explain_email
+  - action: utter_ask_email
+  - action: utter_confirm
+  - intent: affirm
+  - action: action_send_email
+  - action: utter_goodbye
+- story: phone interjection
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: identity_access_management
+  - action: utter_identity_access_management
+  - action: utter_ask_user_form
+  - action: user_form
+  - active_loop: user_form
+  - slot_was_set:
+    - requested_slot: phone-number
+  - intent: explain
+  - action: utter_explain_phone
+  - action: utter_ask_phone
+  - action: utter_confirm
+  - intent: affirm
+  - action: action_send_email
+  - action: utter_goodbye
+- story: Story from Conversation ID 71c3a574c6cf4edd86eeb6b5924ac5c7
+  steps:
+  - slot_was_set:
+    - email-address: rajendra@gmail.com
+  - action: user_form
+  - slot_was_set:
+    - email-address: rajendra@gmail.com
+  - slot_was_set:
+    - requested_slot: phone-number
+  - action: utter_ask_username
+  - intent: inform
+    entities:
+    - username: rajendras
+  - slot_was_set:
+    - username: rajendras
+  - action: utter_ask_phone
+  - intent: inform
+    entities:
+    - phone-number: '7877798670'
+  - slot_was_set:
+    - phone-number: '7877798670'
+  - action: action_default_fallback
+  - action: utter_confirm
+- story: Story from Conversation ID 96ac5dc6ce4a4e3b9c710f4a6d5dca44
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: cyber_security
+  - action: utter_cyber_security
+  - action: utter_ask_user_form
+  - action: user_form
+  - active_loop: user_form
+  - slot_was_set:
+    - requested_slot: email-address
+  - intent: inform
+    entities:
+    - username: rajendra
+  - slot_was_set:
+    - username: rajendra
+  - action: user_form
+  - slot_was_set:
+    - username: rajendra
+  - slot_was_set:
+    - requested_slot: email-address
+  - intent: inform
+    entities:
+    - email-address: rajendra@gmail.com
+  - slot_was_set:
+    - email-address: rajendra@gmail.com
+  - action: user_form
+  - slot_was_set:
+    - email-address: rajendra@gmail.com
+  - slot_was_set:
+    - requested_slot: phone-number
+  - intent: inform
+    entities:
+    - phone-number: '9849389348'
+  - slot_was_set:
+    - phone-number: '9849389348'
+  - action: user_form
+  - slot_was_set:
+    - phone-number: '9849389348'
+  - slot_was_set:
+    - requested_slot: null
   - active_loop: null
   - action: utter_confirm
-  - intent: deny
-  - action: utter_goodbye
+  - intent: affirm
+  - action: action_send_email
