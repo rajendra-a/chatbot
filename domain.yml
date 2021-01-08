@@ -1,7 +1,6 @@
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
-
 intents:
 - greet
 - goodbye
@@ -19,12 +18,10 @@ intents:
 - utter_ask_user_form
 - username
 - explain
-
 entities:
 - username
 - email-address
 - phone-number
-
 slots:
   username:
     type: text
@@ -38,7 +35,6 @@ slots:
   requested_slot:
     type: unfeaturized
     influence_conversation: false
-
 responses:
   utter_greet:
   - buttons:
@@ -137,10 +133,8 @@ responses:
   - text: we can connect in a mean time.
   utter_ask_phone:
   - text: please provide phone number
-  
 actions:
 - action_send_email
-
 forms:
   user_form:
     email-address:
