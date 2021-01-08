@@ -4,7 +4,6 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-
 - story: cyber security happy path
   steps:
   - intent: greet
@@ -20,7 +19,6 @@ stories:
   - action: action_send_email
   - intent: goodbye
   - action: utter_goodbye
-
 - story: vciso happay path
   steps:
   - intent: greet
@@ -36,7 +34,6 @@ stories:
   - action: action_send_email
   - intent: goodbye
   - action: utter_goodbye
-
 - story: data protection and privacy happy path
   steps:
   - intent: greet
@@ -52,7 +49,6 @@ stories:
   - action: action_send_email
   - intent: goodbye
   - action: utter_goodbye
-
 - story: it audit services happy path
   steps:
   - intent: greet
@@ -68,7 +64,6 @@ stories:
   - action: action_send_email
   - intent: goodbye
   - action: utter_goodbye
-
 - story: identity access and management services happy path
   steps:
   - intent: greet
@@ -84,7 +79,6 @@ stories:
   - action: action_send_email
   - intent: goodbye
   - action: utter_goodbye
-  
 - story: security operations happy path
   steps:
   - intent: greet

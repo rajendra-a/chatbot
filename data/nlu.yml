@@ -143,18 +143,12 @@ nlu:
     - name is [rajendra](username) email [rajendra@gmail.com](email-address) phone [7386528936](phone-number)
     - [rajendra](username) [rajendra@syberzen.com](email-address) [7386528936](phone-number)
     - name [rajendra](username) email [rajendra@gmail.com](email-address) phone [8979788998](phone-number)
-    - [9090765467](phone-number)
-    - [rajendrar@syberzen.com](email-address)
-    - [rajendra](username)
-    - [9089988899](phone-number)
-    - [rajendra@syberzen.com](email-address)
     - [rajendra](username) reddy [rajendra@syberzen.com](email-address) [8989987609](phone-number)
-    - [rajendra@gamil,com](email-address)
-    - [9989998867](phone-number)
-    - rajnedr [rajendra@ccc.omc](username) rererewrer
     - [rajendra](username) [rajendrarddy@gmail.com](email-address) [9050450444](phone-number)
     - [rajendra](username) [rejan@syberzen.com](email-address) [8554545453](phone-number)
     - [venkat](username) [venkat@wolkensoftware.com](email-address) [8998955435](phone-number)
+    - [rajendra](username) [rajendra@syberzen.com](email-address) [9854549543](phone-number)
+    - [rajendra](username) [rajendra@syberzen.com](email-address) [8585945433](phone-number)
 - regex: email-address
   examples: |
     - ^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$

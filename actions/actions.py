@@ -16,6 +16,7 @@ from rasa_sdk.forms import FormAction
 from rasa_sdk.events import SlotSet
 
 
+
 class ActionSendEmail(FormAction):
 
     def name(self) -> Text:

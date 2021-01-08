@@ -29,6 +29,9 @@ slots:
   phone-number:
     type: text
     influence_conversation: false
+  requested_slot:
+    type: unfeaturized
+    influence_conversation: false
 responses:
   utter_greet:
   - buttons:
@@ -107,8 +110,8 @@ responses:
       title: Yes
     - payload: /deny
       title: No
-    text: Please confirm your username is {username}, email {email-address}, and phone
-      number {phone-number}
+    text: Please confirm your username is {username}, email {email-address} and phone
+      {phone-number}
   utter_deny:
   - text: Seems to be not interested, Thanks for your valuble time
   utter_goodbye:

@@ -24,11 +24,6 @@ rules:
   - active_loop: null
   - action: utter_confirm
 
-- rule: Send Email
-  steps:
-  - intent: affirm
-  - action: action_send_email
-  
 
 
 
