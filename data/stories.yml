@@ -85,7 +85,7 @@ stories:
   - action: action_send_email
   - action: utter_goodbye
 
-- story: identity access and management services happy path
+- story: identity access and management services unhappy path
   steps:
   - intent: greet
   - action: utter_greet
