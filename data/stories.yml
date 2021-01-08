@@ -84,6 +84,20 @@ stories:
   - intent: affirm
   - action: action_send_email
   - action: utter_goodbye
+
+- story: identity access and management services happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: identity_access_management
+  - action: utter_identity_access_management
+  - action: utter_ask_user_form
+  - action: user_form
+  - active_loop: user_form
+  - active_loop: null
+  - action: utter_confirm
+  - intent: deny
+  - action: utter_deny
 - story: username interjection
   steps:
   - intent: greet
