@@ -18,23 +18,24 @@ intents:
 - utter_ask_user_form
 - username
 - explain
+- hi
 entities:
 - username
 - email-address
 - phone-number
 slots:
-  username:
-    type: text
-    influence_conversation: false
   email-address:
     type: text
-    influence_conversation: false
+    influence_conversation: true
   phone-number:
     type: text
-    influence_conversation: false
+    influence_conversation: true
   requested_slot:
-    type: unfeaturized
-    influence_conversation: false
+    type: text
+    influence_conversation: true
+  username:
+    type: text
+    influence_conversation: true
 responses:
   utter_greet:
   - buttons:
@@ -51,7 +52,13 @@ responses:
     - payload: /sec_ops
       title: SecOps
     text: Hey, I am a bot to provide services from Syberzen, Please select a service
-      to know about.
+      to know more about.
+  utter_telugu_greet:
+  - text: నమస్తే, నేను సైబర్‌జెన్ నుండి సేవలను అందించడానికి ఒక బోట్, దయచేసి మరింత
+      తెలుసుకోవడానికి ఒక సేవను ఎంచుకోండి
+  utter_hindi_greet:
+  - text: अरे, मैं Syberzen से सेवाएं प्रदान करने के लिए एक बॉट हूं, कृपया अधिक जानने
+      के लिए एक सेवा का चयन करें
   utter_cyber_security:
   - text: We at Syberzen, provide Vulnerability and Penetration Testing (VAPT) service
       to corporates to help secure gaps of IT ecosystem that can then be used to launch
@@ -107,6 +114,12 @@ responses:
   utter_ask_user_form:
   - text: Please provide us username, email and phone number. Soon we will get in
       touch with you
+  utter_telugu_ask_user_form:
+  - text: దయచేసి మాకు వినియోగదారు పేరు, ఇమెయిల్ మరియు ఫోన్ నంబర్ ఇవ్వండి. త్వరలో మేము
+      మీతో సంప్రదిస్తాము
+  utter_hindi_ask_user_form:
+  - text: कृपया हमें उपयोगकर्ता नाम, ईमेल और फोन नंबर प्रदान करें। जल्द ही हम आपके
+      संपर्क में आएंगे
   utter_confirm:
   - buttons:
     - payload: /affirm

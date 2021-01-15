@@ -3,9 +3,13 @@ stories:
 - story: cyber security happy path
   steps:
   - intent: greet
+  - action: utter_hindi_greet
+  - action: utter_telugu_greet
   - action: utter_greet
   - intent: cyber_security
   - action: utter_cyber_security
+  - action: utter_hindi_ask_user_form
+  - action: utter_telugu_ask_user_form
   - action: utter_ask_user_form
   - action: user_form
   - active_loop: user_form
@@ -17,9 +21,13 @@ stories:
 - story: vciso happay path
   steps:
   - intent: greet
+  - action: utter_hindi_greet
+  - action: utter_telugu_greet
   - action: utter_greet
   - intent: vciso
   - action: utter_vciso
+  - action: utter_hindi_ask_user_form
+  - action: utter_telugu_ask_user_form
   - action: utter_ask_user_form
   - action: user_form
   - active_loop: user_form
@@ -31,9 +39,13 @@ stories:
 - story: data protection and privacy happy path
   steps:
   - intent: greet
+  - action: utter_hindi_greet
+  - action: utter_telugu_greet
   - action: utter_greet
   - intent: data_protection_and_privacy
   - action: utter_data_protection_privacy
+  - action: utter_hindi_ask_user_form
+  - action: utter_telugu_ask_user_form
   - action: utter_ask_user_form
   - action: user_form
   - active_loop: user_form
@@ -45,9 +57,13 @@ stories:
 - story: it audit services happy path
   steps:
   - intent: greet
+  - action: utter_hindi_greet
+  - action: utter_telugu_greet
   - action: utter_greet
   - intent: it_audit_services
   - action: utter_it_audit_readiness
+  - action: utter_hindi_ask_user_form
+  - action: utter_telugu_ask_user_form
   - action: utter_ask_user_form
   - action: user_form
   - active_loop: user_form
@@ -59,9 +75,13 @@ stories:
 - story: identity access and management services happy path
   steps:
   - intent: greet
+  - action: utter_hindi_greet
+  - action: utter_telugu_greet
   - action: utter_greet
   - intent: identity_access_management
   - action: utter_identity_access_management
+  - action: utter_hindi_ask_user_form
+  - action: utter_telugu_ask_user_form
   - action: utter_ask_user_form
   - action: user_form
   - active_loop: user_form
@@ -73,9 +93,13 @@ stories:
 - story: security operations happy path
   steps:
   - intent: greet
+  - action: utter_hindi_greet
+  - action: utter_telugu_greet
   - action: utter_greet
   - intent: sec_ops
   - action: utter_sec_ops
+  - action: utter_hindi_ask_user_form
+  - action: utter_telugu_ask_user_form
   - action: utter_ask_user_form
   - action: user_form
   - active_loop: user_form
@@ -88,9 +112,13 @@ stories:
 - story: identity access and management services unhappy path
   steps:
   - intent: greet
+  - action: utter_hindi_greet
+  - action: utter_telugu_greet
   - action: utter_greet
   - intent: identity_access_management
   - action: utter_identity_access_management
+  - action: utter_hindi_ask_user_form
+  - action: utter_telugu_ask_user_form
   - action: utter_ask_user_form
   - action: user_form
   - active_loop: user_form
@@ -101,9 +129,13 @@ stories:
 - story: username interjection
   steps:
   - intent: greet
+  - action: utter_hindi_greet
+  - action: utter_telugu_greet
   - action: utter_greet
   - intent: identity_access_management
   - action: utter_identity_access_management
+  - action: utter_hindi_ask_user_form
+  - action: utter_telugu_ask_user_form
   - action: utter_ask_user_form
   - action: user_form
   - active_loop: user_form
@@ -119,9 +151,13 @@ stories:
 - story: email interjection
   steps:
   - intent: greet
+  - action: utter_hindi_greet
+  - action: utter_telugu_greet
   - action: utter_greet
   - intent: identity_access_management
   - action: utter_identity_access_management
+  - action: utter_hindi_ask_user_form
+  - action: utter_telugu_ask_user_form
   - action: utter_ask_user_form
   - action: user_form
   - active_loop: user_form
@@ -137,9 +173,13 @@ stories:
 - story: phone interjection
   steps:
   - intent: greet
+  - action: utter_hindi_greet
+  - action: utter_telugu_greet
   - action: utter_greet
   - intent: identity_access_management
   - action: utter_identity_access_management
+  - action: utter_hindi_ask_user_form
+  - action: utter_telugu_ask_user_form
   - action: utter_ask_user_form
   - action: user_form
   - active_loop: user_form

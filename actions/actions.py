@@ -29,11 +29,11 @@ class ActionSendEmail(FormAction):
         email = tracker.get_slot("email-address")
         phone = tracker.get_slot("phone-number")
 
-        smtp_server = syberzen.com
+        smtp_server = "syberzen.com"
         port = 465
-        sender_email = "rajendrareddy.akkala@gmail.com"
+        sender_email = "rajendra@syberzen.com"
         receiver_email = "rajendra@syberzen.com"
-        password = "Rajendra@s11*#"
+        password = "Rajendra@sz"
 
         message = f"this message is sent from chatbot {username}, {email}, {phone}"    
 
@@ -42,11 +42,11 @@ class ActionSendEmail(FormAction):
 
         # try to login server
         with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
-            server.login(sender_email, receiver_email)
-            server.sendemail(sender_email, receiver_email, message)
+            server.login(sender_email, password)
+            server.sendmail(sender_email, receiver_email, message)
 
         dispatcher.utter_message(text="Soon we will contact you")
 
-        return [Slotset("username", None),
-                SlotSet("email-address", None),
-                SlotSet("phone-number", None)]
+        return [SlotSet(username, None),
+                SlotSet(email, None),
+                SlotSet(phone, None)]

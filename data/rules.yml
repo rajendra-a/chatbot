@@ -1,10 +1,12 @@
 version: "2.0"
 
 rules:
-- rule: Greeting to user
+- rule: say hi to anytime the user says hi
   steps:
-  - intent: greet
-  - action: utter_greet
+  - intent: hi
+  - action: utter_hindi_greet
+  - action: utter_telugu_greet
+  - action: utter_telugu_greet
 
 - rule: Say goodbye anytime the user says goodbye
   steps:

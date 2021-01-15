@@ -97,6 +97,7 @@ nlu:
     - that sounds good
     - correct
     - yes thanks
+    - హి
 - intent: deny
   examples: |
     - no
@@ -149,13 +150,8 @@ nlu:
     - [venkat](username) [venkat@wolkensoftware.com](email-address) [8998955435](phone-number)
     - [rajendra](username) [rajendra@syberzen.com](email-address) [9854549543](phone-number)
     - [rajendra](username) [rajendra@syberzen.com](email-address) [8585945433](phone-number)
-    
-- regex: email-address
-  examples: |
-    - ^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$
-- regex: phone-number
-  examples: |
-    - \d{10}
+    - [8989893465](phone-number)
+    - [rajendra@gmail.com](email-address)
 - intent: explain
   examples: |
     - why need username
@@ -168,4 +164,10 @@ nlu:
     - why you need mobile number
     - why mobile
     - why email
-    - for what purpose 
+    - for what purpose
+- regex: email-address
+  examples: |
+    - ^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$
+- regex: phone-number
+  examples: |
+    - \d{10}
