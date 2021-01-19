@@ -33,7 +33,11 @@ class ActionSendEmail(FormAction):
         port = 465
         sender_email = "rajendra@syberzen.com"
         receiver_email = "rajendra@syberzen.com"
+<<<<<<< HEAD
         password = "Rajendra@sz"
+=======
+        password = input("Please enter password")
+>>>>>>> 1ff679a1051e00974f27b6b8e66eaabee4f9147f
 
         message = f"this message is sent from chatbot {username}, {email}, {phone}"    
 
